@@ -21,18 +21,16 @@ const Calculator: React.FC = (): ReactElement => {
     return (
         <div className='calculator-container'>
             <div>
-                <h1> I AM CALCULATOR NOT ABC!!!</h1>
-                <p className="Abc-paragraph"> ABC!!!! </p>
-                <hr></hr>
+                <h1 className='calculator-container-header'>Delivery Fee Calculator</h1>
             </div>
             <div>
-                <h1>Calculator form here!</h1>
                 <DataForm
                     onChangeDistance={(e) => setDistance(parseInt(e.target.value))}
                     onChangeBasketValue={(e) => setBasketValue(parseInt(e.target.value))}
                     onChangeDatetime={(e) => setDatetime(parseInt(e.target.value))}
                     handleButtonClick={handleButtonClick}
                 />
+
                 <hr></hr>
             </div>
         </div>

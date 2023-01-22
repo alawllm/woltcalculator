@@ -1,4 +1,10 @@
 .SubmitButton {
-    background-color: blueviolet;
-    font-size: x-large;
+    background-color: rgb(255, 255, 255);
+    color: rgb(37, 44, 127);
+    padding: 0.6rem;
+    border-radius: 1rem;
+}
+
+.SubmitButton :hover {
+    background-color: blue;
 }

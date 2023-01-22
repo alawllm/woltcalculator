@@ -20,15 +20,12 @@ const DataForm: React.FC<DataFormProps> = ({ onChangeDistance, onChangeBasketVal
     return (
         <div className='DataForm-container'>
             <form onSubmit={handleSubmit}>
-                <h2>TESTING SOME HTML INPUTS</h2>
                 <InputForm
                     onChangeDistance={onChangeDistance}
                     onChangeBasketValue={onChangeBasketValue}
                     onChangeDatetime={onChangeDatetime}
                 />
-                <h2>BUTTON</h2>
                 <SubmitButton onClick={handleButtonClick} param='CLICK HERE TO GET DELIVERY VALUE CALCULATED' />
-                <h2>CALCULATION RESULT</h2>
             </form>
         </div>
     )

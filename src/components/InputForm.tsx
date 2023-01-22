@@ -48,19 +48,21 @@ type InputFormProps = {
 const InputForm: React.FC<InputFormProps> = ({ onChangeDistance, onChangeBasketValue, onChangeDatetime }: InputFormProps): ReactElement => {
     return (
         <div className='InputForm-container'>
-            <h2>Form inputs</h2>
-            <NumericalInputField
-                onChange={onChangeDistance}
-                placeholder='Delivery Distance in meters'
-            />
-            <NumericalInputField
-                onChange={onChangeBasketValue}
-                placeholder='Basket value'
-            />
-            <DatetimeInputField
-                onChange={onChangeDatetime}
-                placeholder='date of delivery'
-            />
+            <div className='input-field'>
+                <NumericalInputField
+                    onChange={onChangeDistance}
+                    placeholder='Delivery Distance in meters'
+                /></div>
+            <div className='inputField'>
+                <NumericalInputField
+                    onChange={onChangeBasketValue}
+                    placeholder='Basket value'
+                /></div>
+            <div className='inputField'>
+                <DatetimeInputField
+                    onChange={onChangeDatetime}
+                    placeholder='date of delivery'
+                /></div>
         </div>
     )
 }

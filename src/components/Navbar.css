@@ -1,18 +1,20 @@
 .navbar {
-    background-color: aquamarine;
+    background-color: rgb(15, 33, 190);
+    color: white;
+    font-family: futura;
+    min-width: 100%;
+    padding-bottom: 0.7rem;
+    align-items: center;
+    top: 0;
+    position: fixed;
 }
 
-ul {
-    color: black;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-li {
+.navbar a {
+    color: white;
+    justify-content: left;
     display: inline;
 }
 
-a {
-    background-color: brown;
+.navbar p {
+    margin: 0px;
 }
