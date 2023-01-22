@@ -1,12 +1,13 @@
 .App {
+  display: flex;
   text-align: center;
+
 }
 
 .App-calculator {
   background-color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   font-size: calc(9px + 2rem);
   margin-top: 2rem;
+  display: flex;
+  justify-content: center;
 }

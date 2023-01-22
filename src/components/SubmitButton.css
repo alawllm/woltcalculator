@@ -3,6 +3,7 @@
     color: rgb(37, 44, 127);
     padding: 0.6rem;
     border-radius: 1rem;
+    margin: 2rem;
 }
 
 .SubmitButton :hover {

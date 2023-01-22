@@ -53,12 +53,12 @@ const InputForm: React.FC<InputFormProps> = ({ onChangeDistance, onChangeBasketV
                     onChange={onChangeDistance}
                     placeholder='Delivery Distance in meters'
                 /></div>
-            <div className='inputField'>
+            <div className='input-field'>
                 <NumericalInputField
                     onChange={onChangeBasketValue}
                     placeholder='Basket value'
                 /></div>
-            <div className='inputField'>
+            <div className='input-field'>
                 <DatetimeInputField
                     onChange={onChangeDatetime}
                     placeholder='date of delivery'

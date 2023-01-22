@@ -1,16 +1,17 @@
 .calculator-container {
     background-color: #15c0cf;
-    border-radius: 2%;
+    border-radius: 4rem;
     color: white;
     font-family: futura;
-    padding: 1rem;
+    padding: 2rem;
     width: 80%;
+    max-width: 1400px;
     margin-top: 4rem;
 
 }
 
 .calculator-container-header {
     font-family: Oswald, futura;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
     font-size: 3rem;
 }

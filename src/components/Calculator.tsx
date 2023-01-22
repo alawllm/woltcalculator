@@ -31,7 +31,6 @@ const Calculator: React.FC = (): ReactElement => {
                     handleButtonClick={handleButtonClick}
                 />
 
-                <hr></hr>
             </div>
         </div>
     );
