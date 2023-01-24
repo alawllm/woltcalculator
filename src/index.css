@@ -81,3 +81,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
 }
+
+.App-calculator {
+  width: 80%;
+}

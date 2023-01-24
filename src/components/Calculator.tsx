@@ -9,12 +9,13 @@ import calculateDeliveryPrice from '../calculateDeliveryPrice'
 const Calculator: React.FC = (): ReactElement => {
 
     const [distance, setDistance] = useState<number>(0);
+    const [numberItems, setNumberItems] = useState<number>(0);
     const [basketValue, setBasketValue] = useState<number>(0);
     const [datetime, setDatetime] = useState<any>('');
 
     const handleButtonClick = function (): void {
-        const deliveryPrice = calculateDeliveryPrice(distance, basketValue, datetime)
-        alert(`MESSAGE: distance=${distance}, basketValue=${basketValue}, datetime=${datetime} \n delivery price=${deliveryPrice}`)
+        const deliveryPrice = calculateDeliveryPrice(distance, numberItems, basketValue, datetime)
+        alert(`MESSAGE: distance=${distance}, numberItems=${numberItems} basketValue=${basketValue}, datetime=${datetime.toString()} \n delivery price=${deliveryPrice}`)
     }
 
     // const status = () => {setDistance(0);}
@@ -26,6 +27,7 @@ const Calculator: React.FC = (): ReactElement => {
             <div>
                 <DataForm
                     onChangeDistance={(e) => setDistance(parseInt(e.target.value))}
+                    onChangeNumberItems={(e) => setNumberItems(parseInt(e.target.value))}
                     onChangeBasketValue={(e) => setBasketValue(parseInt(e.target.value))}
                     onChangeDatetime={(e) => setDatetime(parseInt(e.target.value))}
                     handleButtonClick={handleButtonClick}

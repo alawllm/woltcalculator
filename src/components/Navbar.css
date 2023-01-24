@@ -3,12 +3,14 @@
     color: white;
     font-family: futura;
     width: 100%;
-    padding-bottom: 0.7rem;
+    padding-bottom: 0.5rem;
     top: 0;
     position: fixed;
     text-align: left;
     padding-left: 1rem;
     margin-left: 0;
+    box-shadow: 5px 5px 5px rgba(172, 172, 172, 0.387);
+
 }
 
 .navbar a {
