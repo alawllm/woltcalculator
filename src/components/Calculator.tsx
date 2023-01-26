@@ -1,6 +1,7 @@
 import React, { ReactElement, useState } from 'react';
 import './Calculator.css';
 import DataForm from './DataForm'
+import OutputField from './OutputField'
 import calculateDeliveryPrice from '../calculateDeliveryPrice'
 
 
@@ -32,7 +33,9 @@ const Calculator: React.FC = (): ReactElement => {
                     onChangeDatetime={(e) => setDatetime(parseInt(e.target.value))}
                     handleButtonClick={handleButtonClick}
                 />
-
+                <OutputField
+                    value='placeholder'
+                />
             </div>
         </div>
     );
