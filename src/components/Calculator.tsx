@@ -32,7 +32,7 @@ const Calculator: React.FC = (): ReactElement => {
                     onChangeDistance={(e) => setDistance(parseInt(e.target.value))}
                     onChangeNumberItems={(e) => setNumberItems(parseInt(e.target.value))}
                     onChangeBasketValue={(e) => setBasketValue(parseInt(e.target.value))}
-                    onChangeDatetime={(e) => setDatetime(parseInt(e.target.value))}
+                    onChangeDatetime={(e) => setDatetime(e.target.value)}
                     handleButtonClick={handleButtonClick}
                 />
                 <OutputField
