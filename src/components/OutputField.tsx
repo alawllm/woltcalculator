@@ -7,7 +7,7 @@ type OutputFieldProps = {
 
 const OutputField: React.FC<OutputFieldProps> = ({ value }: OutputFieldProps): ReactElement => {
     return (
-        <h2 className='OutputField'>Haha, and value: {value} </h2>
+        <h2 className='OutputField'>{value} </h2>
     )
         ;
 }

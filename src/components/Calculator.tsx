@@ -5,7 +5,6 @@ import OutputField from './OutputField'
 import calculateDeliveryPrice from '../calculateDeliveryPrice'
 
 
-
 // class Calculator extends React.Component {
 const Calculator: React.FC = (): ReactElement => {
 
@@ -13,10 +12,13 @@ const Calculator: React.FC = (): ReactElement => {
     const [numberItems, setNumberItems] = useState<number>(0);
     const [basketValue, setBasketValue] = useState<number>(0);
     const [datetime, setDatetime] = useState<any>('');
+    const [outText, setOutText] = useState<string>('');
 
     const handleButtonClick = function (): void {
+        let output_text: string;
         const deliveryPrice = calculateDeliveryPrice(distance, numberItems, basketValue, datetime)
-        alert(`MESSAGE: distance=${distance}, numberItems=${numberItems} basketValue=${basketValue}, datetime=${datetime.toString()} \n delivery price=${deliveryPrice}`)
+        output_text = `distance=${distance}, numberItems=${numberItems} basketValue=${basketValue}, datetime=${datetime.toString()} \n delivery price=${deliveryPrice}`
+        setOutText(output_text)
     }
 
     // const status = () => {setDistance(0);}
@@ -34,7 +36,7 @@ const Calculator: React.FC = (): ReactElement => {
                     handleButtonClick={handleButtonClick}
                 />
                 <OutputField
-                    value='placeholder'
+                    value={outText}
                 />
             </div>
         </div>
