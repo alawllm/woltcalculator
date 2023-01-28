@@ -76,11 +76,6 @@ h6 {
   isolation: isolate;
 }
 
-body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-}
 
 .App-calculator {
   width: 80%;
