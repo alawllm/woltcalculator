@@ -1,5 +1,5 @@
 .navbar {
-    background-color: rgb(123, 166, 175);
+    background-color: rgb(106, 175, 189);
     color: rgb(243, 243, 243);
     font-family: futura;
     width: 100%;
@@ -10,7 +10,7 @@
     text-align: left;
     padding-left: 1rem;
     margin-left: 0;
-    box-shadow: 5px 5px 5px rgba(172, 172, 172, 0.387);
+    box-shadow: 5px 5px 5px rgba(146, 146, 146, 0.387);
 
 }
 

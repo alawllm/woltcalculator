@@ -1,10 +1,15 @@
-.numInputFieldDiv {
+.inputFieldDiv {
     display: flex;
     display: inline-block;
-    align-items: left;
-    margin: 0.7rem;
 }
 
 .InputForm-input-field {
-    border-radius: 0.2rem;
+    border-radius: 0.9rem;
+    margin: 0.7rem;
+    padding: 0.2rem;
+}
+
+.inputFieldLabel {
+    font-size: 1.2rem;
+    font-weight: 600;
 }
