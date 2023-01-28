@@ -28,7 +28,7 @@ const DataForm: React.FC<DataFormProps> = ({ onChangeDistance, onChangeNumberIte
                     onChangeDatetime={onChangeDatetime}
                 />
 
-                <p><SubmitButton onClick={handleButtonClick} param='CALCULATE DELIVERY PRICE' /></p>
+                <p><SubmitButton onClick={handleButtonClick} param='CLICK' /></p>
             </form>
         </div>
     )

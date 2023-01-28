@@ -6,12 +6,7 @@ const Navbar: React.FC = (): ReactElement => {
         <div className='navbar'>
             <span>
 
-                <a
-                    className="navbar-link"
-                    href="https://reactjs.org"
-                >
-                    aw email
-                </a>
+                WOLT DELIVERY FEE CALCULATOR
 
             </span>
         </div>

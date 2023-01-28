@@ -1,42 +1,51 @@
 import React, { ReactElement } from 'react';
 import './InputForm.css';
 
-type NumericalInputFieldProps = {
+type NumInputFieldProps = {
     onChange: any,
-    placeholder: string
+    placeholder: string,
+    label: string
+    id: string
 }
 
-const NumericalInputField: React.FC<NumericalInputFieldProps> = ({ onChange, placeholder }: NumericalInputFieldProps): ReactElement => {
+const NumInputField: React.FC<NumInputFieldProps> = ({ onChange, placeholder, label, id }: NumInputFieldProps): ReactElement => {
     return (
-        <span>
-
+        <div className='numInputFieldDiv'>
+            <label htmlFor={id} className='numInputFieldLabel'>{label}</label>
+            <p></p>
             <input
-                type='number'
+                type='string'
                 placeholder={placeholder}
                 onChange={onChange}
                 className='InputForm-input-field'
+                id={id}
                 required
             />
-        </span>
+        </div>
     )
 }
 
 type DatetimeInputFieldProps = {
     onChange: any,
     placeholder: string
+    label: string
+    id: string
 }
 
-const DatetimeInputField: React.FC<DatetimeInputFieldProps> = ({ onChange, placeholder }: DatetimeInputFieldProps): ReactElement => {
+const DatetimeInputField: React.FC<DatetimeInputFieldProps> = ({ onChange, placeholder, label, id }: DatetimeInputFieldProps): ReactElement => {
     return (
-        <span>
+        <div className='numInputFieldDiv'>
+            <label htmlFor={id} className='numInputFieldLabel'>{label}</label>
+            <p></p>
             <input
                 type='datetime-local'
                 placeholder={placeholder}
                 onChange={onChange}
                 className='InputForm-input-field'
+                id={id}
                 required
             />
-        </span>
+        </div>
     )
 }
 
@@ -51,28 +60,33 @@ const InputForm: React.FC<InputFormProps> = ({ onChangeDistance, onChangeNumberI
     return (
         <div className='InputForm-container'>
             <div className='input-field'>
-
-                <NumericalInputField
+                <NumInputField
                     onChange={onChangeDistance}
                     placeholder='Delivery Distance in meters'
+                    label='delivery distance'
+                    id='deliveryDistanceId'
                 /></div>
             <div className='input-field'>
-                <p>Number of items</p>
-                <NumericalInputField
+                <NumInputField
                     onChange={onChangeNumberItems}
                     placeholder='Number of items'
+                    label='number of items'
+                    id='numItemsId'
                 /></div>
             <div className='input-field'>
-                <p>Basket value</p>
-                <NumericalInputField
+                <NumInputField
                     onChange={onChangeBasketValue}
                     placeholder='Basket value'
+                    label='basket value'
+                    id='basketValueId'
                 /></div>
             <div className='input-field'>
-                <p>Time of delivery</p>
                 <DatetimeInputField
                     onChange={onChangeDatetime}
                     placeholder='date of delivery'
+                    label='date of delivery'
+                    id='datetimeId'
+
                 /></div>
         </div>
     )

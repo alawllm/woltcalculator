@@ -15,9 +15,8 @@ const Calculator: React.FC = (): ReactElement => {
     const [outText, setOutText] = useState<string>('');
 
     const handleButtonClick = function (): void {
-        let output_text: string;
         const deliveryPrice = calculateDeliveryPrice(distance, numberItems, basketValue, datetime)
-        output_text = `distance=${distance}, numberItems=${numberItems} basketValue=${basketValue}, datetime=${datetime} \n delivery price=${deliveryPrice}`
+        let output_text = `distance=${distance}, numberItems=${numberItems} basketValue=${basketValue}, datetime=${datetime} \n delivery price=${deliveryPrice}`
         setOutText(output_text)
     }
 
@@ -25,7 +24,7 @@ const Calculator: React.FC = (): ReactElement => {
     return (
         <div className='calculator-container'>
             <div>
-                <h1 className='calculator-container-header'>Delivery Fee Calculator</h1>
+                <h1 className='calculator-container-header'>Calculate total price!</h1>
             </div>
             <div>
                 <DataForm

@@ -1,15 +1,17 @@
 .SubmitButton {
-    background-color: rgba(255, 255, 255, 0.979);
-    color: rgb(50, 55, 117);
+    background-color: rgba(243, 243, 244, 0.979);
+    color: rgb(65, 105, 142);
     padding: 0.6rem;
     border-radius: 5rem;
     margin: 1rem;
     transition: transform 250ms;
     font-family: futura;
-    font-weight: 500;
+    font-weight: 600;
+
 }
 
 .SubmitButton:hover {
     background-color: rgb(255, 255, 255);
     transform: translateY(-3px);
+    transition: 0.5s;
 }

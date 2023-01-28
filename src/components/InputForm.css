@@ -1,10 +1,10 @@
-.InputForm-container {
+.numInputFieldDiv {
     display: flex;
     display: inline-block;
-
-
+    align-items: left;
+    margin: 0.7rem;
 }
 
-.input-field {
-    margin: 1rem;
+.InputForm-input-field {
+    border-radius: 0.2rem;
 }
