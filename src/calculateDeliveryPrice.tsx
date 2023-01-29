@@ -1,10 +1,3 @@
-const calculateDeliveryPrice = function (distanceMeters: number, numberItems: number, basketValue: number, datetime: any): number {
-    // alert(`INNER FUNCTION ALERT, HAHA`)
-    return calculateDistanceFee(distanceMeters)
-}
-
-export default calculateDeliveryPrice
-
 //  cart value < 10€ - surcharge up to 10 eur //
 function calculateSurchargeFee(cartValue) {
     let surchargeFee = 0;
@@ -69,3 +62,29 @@ function isRushHour(dateAndHourLocal) {
     return isFriday && isHotTime
 
 }
+
+const calculateDeliveryPrice = function (distanceMeters: number, numberItems: number, basketValue: number, dateTime: any): number {
+    // alert(`INNER FUNCTION ALERT, HAHA`)
+    const calculatedSurchargeFee = calculateSurchargeFee(basketValue)
+    const calculatedDistanceFee = calculateDistanceFee(distanceMeters)
+    const calculatedSurchargeBulk = calculateSurchargeBulk(numberItems)
+    const calculatedRushHour = isRushHour(dateTime)
+
+    let totalDeliveryPrice = calculatedSurchargeFee + calculatedDistanceFee + calculatedSurchargeBulk
+
+    if (basketValue >= 100) {
+        totalDeliveryPrice = 0
+    }
+    if (calculatedRushHour) {
+        totalDeliveryPrice *= 1.2
+    }
+    if (totalDeliveryPrice > 15) {
+        totalDeliveryPrice = 15
+    }
+
+    return totalDeliveryPrice
+}
+
+
+
+export default calculateDeliveryPrice
