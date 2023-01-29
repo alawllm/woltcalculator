@@ -16,7 +16,7 @@ const Calculator: React.FC = (): ReactElement => {
 
     const handleButtonClick = function (): void {
         const deliveryPrice = calculateDeliveryPrice(distance, numberItems, basketValue, datetime)
-        let output_text = `delivery price: ${deliveryPrice}€`
+        let output_text = `your delivery will cost ${deliveryPrice}€`
         setOutText(output_text)
     }
 

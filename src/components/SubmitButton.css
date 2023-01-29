@@ -14,7 +14,7 @@
 
 .SubmitButton:hover {
     background-color: rgb(255, 255, 255);
-    color: rgb(18, 72, 135);
+    color: rgb(11, 44, 81);
     transform: translateY(-5px);
     transition: 0.5s;
 }
