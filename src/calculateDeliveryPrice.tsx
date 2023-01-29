@@ -5,12 +5,6 @@ const calculateDeliveryPrice = function (distanceMeters: number, numberItems: nu
 
 export default calculateDeliveryPrice
 
-
-
-// empty variables
-let deliveryDistance = 0
-let orderTime = 0
-
 //  cart value < 10€ - surcharge up to 10 eur //
 function calculateSurchargeFee(cartValue) {
     let surchargeFee = 0;
@@ -35,10 +29,6 @@ function calculateDistanceFee(deliveryDistance) {
     }
     return distanceFee
 }
-//variables for bulk items
-let numberOfItems = 0
-let bulkForItem = 0.5
-let maxDeliveryFee = 15
 
 
 function calculateSurchargeBulk(numberOfItems) {
@@ -62,4 +52,20 @@ function calculateSurchargeBulk(numberOfItems) {
     return surchargeBulk
 }
 
+function isRushHour(dateAndHourLocal) {
 
+    const delivTime = new Date(dateAndHourLocal)
+    const delivDay = delivTime.getUTCDay()
+    const delivHour = delivTime.getUTCHours()
+    let isFriday = false;
+    let isHotTime = false;
+
+    if (delivDay == 5) {
+        isFriday = true;
+    }
+    if (delivHour >= 15 && delivHour < 19) {
+        isHotTime = true;
+    }
+    return isFriday && isHotTime
+
+}
