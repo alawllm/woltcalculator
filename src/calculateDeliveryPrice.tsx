@@ -86,5 +86,4 @@ const calculateDeliveryPrice = function (distanceMeters: number, numberItems: nu
 }
 
 
-
 export default calculateDeliveryPrice
