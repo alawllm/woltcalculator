@@ -6,7 +6,7 @@ const FooterBottom: React.FC = (): ReactElement => {
         <div className='FooterBottom'>
             <span>
 
-                Developed in 2023
+                developed in 2023
                 by Alicja Willam
 
             </span>

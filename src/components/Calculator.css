@@ -10,6 +10,12 @@
 
 }
 
+.calculator-container:hover {
+    background-color: #185865;
+    transition: 0.5s;
+
+}
+
 .calculator-container-header {
     font-family: Oswald, futura;
     font-weight: 500;
