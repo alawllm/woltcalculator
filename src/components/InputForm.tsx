@@ -1,8 +1,11 @@
 import React, { ReactElement } from 'react';
 import './InputForm.css';
 
+type onChangeFunction = (e: React.ChangeEvent<HTMLInputElement>) => void;
+
+
 type NumInputFieldProps = {
-    onChange: any,
+    onChange: onChangeFunction,
     placeholder: string,
     label: string
     id: string
@@ -27,7 +30,7 @@ const NumInputField: React.FC<NumInputFieldProps> = ({ onChange, placeholder, la
 }
 
 type DatetimeInputFieldProps = {
-    onChange: any,
+    onChange: onChangeFunction,
     placeholder: string
     label: string
     id: string
@@ -51,10 +54,10 @@ const DatetimeInputField: React.FC<DatetimeInputFieldProps> = ({ onChange, place
 }
 
 type InputFormProps = {
-    onChangeDistance: any
-    onChangeNumberItems: any
-    onChangeBasketValue: any
-    onChangeDatetime: any
+    onChangeDistance: onChangeFunction,
+    onChangeNumberItems: onChangeFunction,
+    onChangeBasketValue: onChangeFunction,
+    onChangeDatetime: onChangeFunction,
 }
 
 const InputForm: React.FC<InputFormProps> = ({ onChangeDistance, onChangeNumberItems, onChangeBasketValue, onChangeDatetime }: InputFormProps): ReactElement => {

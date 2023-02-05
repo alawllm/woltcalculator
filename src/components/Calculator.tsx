@@ -13,12 +13,12 @@ const Calculator: React.FC = (): ReactElement => {
     const [datetime, setDatetime] = useState<string>('');
     const [outText, setOutText] = useState<string>('');
 
-    const handleButtonClick = function (): void {
+    function handleButtonClick(): void {
         let output_text: string = 'please enter the data'
         if (numberItems <= 0 || !(Number.isInteger(numberItems))) {
             setNumberItems(0)
         }
-        if (distance <= 0 || numberItems == 0 || basketValue <= 0 || datetime == '') {
+        if (distance <= 0 || numberItems === 0 || basketValue <= 0 || datetime === '') {
             output_text = `please enter valid numbers`
         }
         else {
@@ -28,6 +28,7 @@ const Calculator: React.FC = (): ReactElement => {
         setOutText(output_text)
     }
 
+    type onChangeFunction = (e: React.ChangeEvent<HTMLInputElement>) => void;
     // const status = () => {setDistance(0);}
     return (
         <div className='calculator-container'>
@@ -36,10 +37,10 @@ const Calculator: React.FC = (): ReactElement => {
             </div>
             <div>
                 <DataForm
-                    onChangeDistance={(e) => setDistance(parseInt(e.target.value))}
-                    onChangeNumberItems={(e) => setNumberItems(parseInt(e.target.value))}
-                    onChangeBasketValue={(e) => setBasketValue(parseInt(e.target.value))}
-                    onChangeDatetime={(e) => setDatetime(e.target.value.toString())}
+                    onChangeDistance={(e: React.ChangeEvent<HTMLInputElement>) => setDistance(parseInt(e.target.value))}
+                    onChangeNumberItems={(e: React.ChangeEvent<HTMLInputElement>) => setNumberItems(parseInt(e.target.value))}
+                    onChangeBasketValue={(e: React.ChangeEvent<HTMLInputElement>) => setBasketValue(parseInt(e.target.value))}
+                    onChangeDatetime={(e: React.ChangeEvent<HTMLInputElement>) => setDatetime(e.target.value.toString())}
                     handleButtonClick={handleButtonClick}
                 />
                 <h2 className='OutputField'>{outText} </h2>

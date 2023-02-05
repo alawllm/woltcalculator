@@ -3,13 +3,14 @@ import './DataForm.css';
 import InputForm from './InputForm';
 import SubmitButton from './SubmitButton'
 
+type onChangeFunction = (e: React.ChangeEvent<HTMLInputElement>) => void;
 
 type DataFormProps = {
-    onChangeDistance: any
-    onChangeNumberItems: any
-    onChangeBasketValue: any
-    onChangeDatetime: any
-    handleButtonClick: any
+    onChangeDistance: onChangeFunction
+    onChangeNumberItems: onChangeFunction
+    onChangeBasketValue: onChangeFunction
+    onChangeDatetime: onChangeFunction
+    handleButtonClick: () => void;
 }
 
 const DataForm: React.FC<DataFormProps> = ({ onChangeDistance, onChangeNumberItems, onChangeBasketValue, onChangeDatetime, handleButtonClick }: DataFormProps): ReactElement => {

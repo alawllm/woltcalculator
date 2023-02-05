@@ -2,7 +2,7 @@ import React, { ReactElement } from 'react';
 import './SubmitButton.css';
 
 type SubmitButtonProps = {
-    onClick: any
+    onClick: () => void;
     param: string
 }
 
