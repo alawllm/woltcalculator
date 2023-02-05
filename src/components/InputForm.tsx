@@ -14,7 +14,8 @@ const NumInputField: React.FC<NumInputFieldProps> = ({ onChange, placeholder, la
             <label htmlFor={id} className='inputFieldLabel'>{label}</label>
             <p></p>
             <input
-                type='string'
+                type='number'
+                min='0'
                 placeholder={placeholder}
                 onChange={onChange}
                 className='InputForm-input-field'

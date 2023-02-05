@@ -1,7 +1,7 @@
 //  cart value < 10€ - surcharge up to 10 eur //
 function calculateSurchargeFee(cartValue) {
-    let surchargeFee = 0;
-    const minimalOrderValue = 10
+    let surchargeFee: number = 0;
+    const minimalOrderValue: number = 10
     if (cartValue >= minimalOrderValue) {
         surchargeFee = 0
     }
@@ -13,7 +13,7 @@ function calculateSurchargeFee(cartValue) {
 
 //delivery fee
 function calculateDistanceFee(deliveryDistance) {
-    let distanceFee = 0;
+    let distanceFee: number = 0;
     if (deliveryDistance < 1000) {
         distanceFee = 2
     }
@@ -25,10 +25,10 @@ function calculateDistanceFee(deliveryDistance) {
 
 
 function calculateSurchargeBulk(numberOfItems) {
-    let bulkFee = 1.20;
-    let bulkForItem = 0.5;
-    let thresholdForBulk = 4;
-    let surchargeBulk = 0;
+    const bulkFee: number = 1.20;
+    const bulkForItem: number = 0.5;
+    const thresholdForBulk: number = 4;
+    let surchargeBulk: number = 0;
 
     // if number of items<=4 then no surcharge bulk fee
     if (numberOfItems <= thresholdForBulk) {
@@ -47,11 +47,11 @@ function calculateSurchargeBulk(numberOfItems) {
 
 function isRushHour(dateAndHourLocal) {
 
-    const delivTime = new Date(dateAndHourLocal)
-    const delivDay = delivTime.getUTCDay()
-    const delivHour = delivTime.getUTCHours()
-    let isFriday = false;
-    let isHotTime = false;
+    const delivTime: Date = new Date(dateAndHourLocal)
+    const delivDay: number = delivTime.getUTCDay()
+    const delivHour: number = delivTime.getUTCHours()
+    let isFriday: boolean = false;
+    let isHotTime: boolean = false;
 
     if (delivDay == 5) {
         isFriday = true;
@@ -64,13 +64,13 @@ function isRushHour(dateAndHourLocal) {
 }
 
 const calculateDeliveryPrice = function (distanceMeters: number, numberItems: number, basketValue: number, dateTime: any): number {
-    // alert(`INNER FUNCTION ALERT, HAHA`)
-    const calculatedSurchargeFee = calculateSurchargeFee(basketValue)
-    const calculatedDistanceFee = calculateDistanceFee(distanceMeters)
-    const calculatedSurchargeBulk = calculateSurchargeBulk(numberItems)
-    const calculatedRushHour = isRushHour(dateTime)
 
-    let totalDeliveryPrice = calculatedSurchargeFee + calculatedDistanceFee + calculatedSurchargeBulk
+    const calculatedSurchargeFee: number = calculateSurchargeFee(basketValue)
+    const calculatedDistanceFee: number = calculateDistanceFee(distanceMeters)
+    const calculatedSurchargeBulk: number = calculateSurchargeBulk(numberItems)
+    const calculatedRushHour: boolean = isRushHour(dateTime)
+
+    let totalDeliveryPrice: number = calculatedSurchargeFee + calculatedDistanceFee + calculatedSurchargeBulk
 
     if (basketValue >= 100) {
         totalDeliveryPrice = 0

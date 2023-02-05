@@ -1,7 +1,6 @@
 import React, { ReactElement, useState } from 'react';
 import './Calculator.css';
 import DataForm from './DataForm'
-import OutputField from './OutputField'
 import calculateDeliveryPrice from '../calculateDeliveryPrice'
 
 
@@ -15,8 +14,17 @@ const Calculator: React.FC = (): ReactElement => {
     const [outText, setOutText] = useState<string>('');
 
     const handleButtonClick = function (): void {
-        const deliveryPrice = calculateDeliveryPrice(distance, numberItems, basketValue, datetime)
-        let output_text = `your delivery will cost ${deliveryPrice}€`
+        let output_text: string = 'please enter the data'
+        if (numberItems <= 0 || !(Number.isInteger(numberItems))) {
+            setNumberItems(0)
+        }
+        if (distance <= 0 || numberItems == 0 || basketValue <= 0 || datetime == '') {
+            output_text = `please enter valid numbers`
+        }
+        else {
+            const deliveryPrice = calculateDeliveryPrice(distance, numberItems, basketValue, datetime)
+            output_text = `your delivery will cost ${deliveryPrice}€!`
+        }
         setOutText(output_text)
     }
 
@@ -34,9 +42,7 @@ const Calculator: React.FC = (): ReactElement => {
                     onChangeDatetime={(e) => setDatetime(e.target.value.toString())}
                     handleButtonClick={handleButtonClick}
                 />
-                <OutputField
-                    value={outText}
-                />
+                <h2 className='OutputField'>{outText} </h2>
             </div>
         </div>
     );
