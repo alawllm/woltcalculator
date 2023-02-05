@@ -1,24 +1,24 @@
-.navbar {
-    background-color: rgb(72, 145, 160);
+.FooterBottom {
+    background-color: #9cc5cd;
     color: rgb(243, 243, 243);
     font-family: futura;
     width: 100%;
     padding-bottom: 0.5rem;
     padding-top: 0.5rem;
-    top: 0;
-    position: fixed;
-    text-align: left;
+    bottom: 0;
+    position: absolute;
+    text-align: center;
     padding-left: 1rem;
     margin-left: 0;
     box-shadow: 5px 5px 5px rgba(146, 146, 146, 0.387);
 
 }
 
-.navbar a {
+.FooterBottom a {
     color: white;
     display: inline;
 }
 
-.navbar p {
+.FooterBottom p {
     margin: 0px;
 }

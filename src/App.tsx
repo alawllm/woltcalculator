@@ -3,6 +3,8 @@ import './App.css';
 
 import Calculator from './components/Calculator'
 import Navbar from './components/Navbar'
+import FooterBottom from './components/FooterBottom'
+
 
 function App() {
   return (
@@ -11,6 +13,7 @@ function App() {
       <div className="App-calculator">
         <Calculator />
       </div>
+      <FooterBottom />
     </div>
   );
 }
