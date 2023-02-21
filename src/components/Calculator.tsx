@@ -18,7 +18,7 @@ const Calculator: React.FC = (): ReactElement => {
         if (numberItems <= 0 || !(Number.isInteger(numberItems))) {
             setNumberItems(0)
         }
-        if (distance <= 0 || numberItems === 0 || basketValue <= 0 || datetime === '') {
+        if (distance <= 0 || numberItems <= 0 || basketValue <= 0 || datetime === '') {
             output_text = `please enter valid numbers`
         }
         else {
